@@ -7,7 +7,6 @@ export const Container = styled.View`
   padding: 24px;
 `;
 
-export const Title = styled.Text `
-color: #FFF;
-font-size: 32px;
-`
+export const LoadIndicator = styled.ActivityIndicator.attrs(({theme})=> ({
+  color: theme.COLORS.GREEN_700
+}))``;
