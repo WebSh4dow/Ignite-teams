@@ -1,9 +1,19 @@
-import { Container, LoadIndicator } from './styles';
-
+import { Header } from '@components/Header';
+import { Container } from './styles';
+import { Highlight } from '@components/Highlight';
+import { GroupCard } from '@components/GroupCard';
 export function Groups() {
   return (
     <Container>
-      <LoadIndicator color="red"/>
+      <Header/>
+
+      <Highlight 
+        title='Turmas' 
+        subtitle='Joque com a sua turma'
+      />
+      <GroupCard
+         title='Galera do Ignite' 
+      />
     </Container>
   );
 }
