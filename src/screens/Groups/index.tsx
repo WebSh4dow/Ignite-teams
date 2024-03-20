@@ -9,7 +9,7 @@ export function Groups() {
 
       <Highlight 
         title='Turmas' 
-        subtitle='Joque com a sua turma'
+        subtitle='Jogue com a sua turma'
       />
       <GroupCard
          title='Galera do Ignite' 
