@@ -1,4 +1,4 @@
-import { Container, Logo, BackIcon,BackButton } from './style';
+import { Container, Logo, BackIcon,BackButton } from './styles';
 import logoImg from '@asssets/logo.png';
 
 type Props = {
