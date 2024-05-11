@@ -1,4 +1,4 @@
-import { NewGroup } from "@components/NewGroup";
+import { NewGroup } from "@routes/NewGroup";
 import { Groups } from "@screens/Groups";
 import { Players } from "@screens/Players";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
