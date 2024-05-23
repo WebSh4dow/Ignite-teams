@@ -1,6 +1,7 @@
+import { SafeAreaView } from "react-native";
 import styled, {css} from "styled-components/native";
 
-export const Container = styled.View`
+export const Container = styled(SafeAreaView)`
     flex:1;
     background-color: ${({theme})=> theme.COLORS.GRAY_500};
     padding: 24px;
@@ -11,7 +12,7 @@ export const Form = styled.View`
     width: 100%;
     background-color: ${({theme}) => theme.COLORS.GRAY_700};
     flex-direction: row;
-    justifty-content: center;
+    justify-content: center;
     border-radius: 6px;
 `;
 
