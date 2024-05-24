@@ -9,12 +9,13 @@ import { useEffect, useRef, useState } from "react";
 import { PlayerCard } from "@components/PlayerCard";
 import { ListEmpty } from "@components/ListEmpty";
 import { Button } from "@components/Button";
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 import { AppError } from "@utils/AppError";
 import { PlayerAddByGroup } from "@storage/player/playerAddByGroup";
-import { playersGetByGroup } from "@storage/player/playersGetByGroup";
 import { playersGetByGroupAndTeam } from "@storage/player/playersGetByGroupAndTeam";
 import { PlayerStorageDTO } from "@storage/player/PlayerStorageDTO";
+import { playerRemoveByGroup } from "@storage/player/playerRemoveByGroup";
+import { groupRemoveByName } from "@storage/group/groupRemoveByName";
 
 type RouteParams = {
   group: string;
@@ -26,6 +27,7 @@ export function Players() {
   const [team, setTeam] = useState('Time A');
   const [players, setPlayers] = useState<PlayerStorageDTO[]>([]);
 
+  const navigation = useNavigation();
   const route = useRoute();
   const { group } = route.params as RouteParams;
 
@@ -33,7 +35,7 @@ export function Players() {
 
   async function handleAddPlayer() {
     if (newPlayerName.trim().length === 0) {
-      return Alert.alert('Nova pessoa', 'Informe o nome da pessoa para adicionar.')
+      return Alert.alert('Nova pessoa', 'Informe o nome da pessoa para adicionar.');
     }
 
     const newPlayer = {
@@ -53,7 +55,7 @@ export function Players() {
         Alert.alert('Nova pessoa', error.message);
 
       } else {
-        Alert.alert('Nova pessoa', 'Erro ao adicionar uma nova pessoa.')
+        Alert.alert('Nova pessoa', 'Erro ao adicionar uma nova pessoa.');
       }
     }
   }
@@ -65,6 +67,37 @@ export function Players() {
     } catch (error) {
       Alert.alert('Pessoas', 'Erro no carregamento de pessoas filtradas do time selecionado.');
     }
+  }
+
+  async function handlePlayerRemove (playerName: string){
+    try {
+      await playerRemoveByGroup(playerName, group);
+      fetchPlayersByTeam();
+    } catch(error) {
+      Alert.alert('Remover Pessoa', 'Erro ao remover essa pessoa.');
+    }
+  }
+
+  async function groupRemove() {
+    try {
+      await groupRemoveByName(group);
+      navigation.navigate('groups');
+
+    } catch(error) {
+      console.log(error);
+      Alert.alert('Remover grupo', 'Erro ao remover o grupo.');
+    }
+  }
+
+  async function handleGroupRemove() {
+    Alert.alert(
+      'Remover', 
+      ' Deseja Remover o grupo?', 
+      [
+        {text:'Não', style:'cancel'}, 
+        {text:'Sim', onPress: () => groupRemove()}
+      ]
+    );
   }
 
   useEffect(() => {
@@ -126,7 +159,7 @@ export function Players() {
         renderItem={({ item }) => (
 
           <PlayerCard
-            onRemove={() => { }}
+            onRemove={() => handlePlayerRemove(item.name)}
             name={item.name}
           />
         )}
@@ -142,6 +175,7 @@ export function Players() {
       <Button
         title="Remover Turma"
         type="SECUNDARY"
+        onPress={handleGroupRemove}
       />
     </Container>
   );
