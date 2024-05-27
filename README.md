@@ -10,13 +10,12 @@ Ignite Teams é um aplicativo React Native desenvolvido com Expo e TypeScript, q
 
 ## Projeto
 
-![Times](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/1.jpeg)
-
-![Times](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/2.jpeg)
-
-![Turmas](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg)
-
-![Jogadores](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg)
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <img src="https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/1.jpeg" alt="Times" width="45%" style="margin: 5px;"/>
+    <img src="https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/2.jpeg" alt="Times" width="45%" style="margin: 5px;"/>
+    <img src="https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg" alt="Turmas" width="45%" style="margin: 5px;"/>
+    <img src="https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg" alt="Jogadores" width="45%" style="margin: 5px;"/>
+</div>
 
 ## Tecnologias Utilizadas
 
