@@ -8,6 +8,13 @@ Ignite Teams é um aplicativo React Native desenvolvido com Expo e TypeScript, q
 - Criar e gerenciar times dentro das guildas.
 - Adicionar e gerenciar jogadores nos times.
 
+## Tecnologias Utilizadas
+
+- [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
+- [![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
+- [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+- [![React Navigation](https://img.shields.io/badge/React_Navigation-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnavigation.org/)
+
 ## Projeto
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
@@ -16,13 +23,6 @@ Ignite Teams é um aplicativo React Native desenvolvido com Expo e TypeScript, q
     <img src="https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg" alt="Turmas" width="45%" style="margin: 5px;"/>
     <img src="https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg" alt="Jogadores" width="45%" style="margin: 5px;"/>
 </div>
-
-## Tecnologias Utilizadas
-
-- [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
-- [![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
-- [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-- [![React Navigation](https://img.shields.io/badge/React_Navigation-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnavigation.org/)
 
 ## Estrutura do Projeto
 
