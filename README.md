@@ -8,6 +8,16 @@ Ignite Teams é um aplicativo React Native desenvolvido com Expo e TypeScript, q
 - Criar e gerenciar times dentro das guildas.
 - Adicionar e gerenciar jogadores nos times.
 
+## Projeto
+
+![Times](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/1.jpeg)
+
+![Times](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/2.jpeg)
+
+![Turmas](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg)
+
+![Jogadores](https://github.com/WebSh4dow/Ignite-teams/blob/main/assets/3.jpeg)
+
 ## Tecnologias Utilizadas
 
 - [React Native](https://reactnative.dev/)
